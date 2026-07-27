@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Nischitartham · Padma Priya & Mohan Vamsi · 15 Aug 2026</title>
+
+<meta property="og:title" content="Nischitartham — Padma Priya & Mohan Vamsi">
+<meta property="og:description" content="15 August 2026 · Palm Beach Resorts, Visakhapatnam. With love, the Bheemisetty & Buddha Families.">
+<meta property="og:image" content="ganesha.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Marcellus&family=Yatra+One&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#c9a227;
+  --deep-gold:#8a6d1f;
+  --maroon:#6b1f2a;
+  --cream:#fdf8ef;
+  --ink:#40332a;
+  --teal:#1e6b6b;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:'Cormorant Garamond',serif;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+
+/* ---------- decorative paper texture ---------- */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.35;
+  background:
+    radial-gradient(circle at 20% 10%,rgba(201,162,39,.10),transparent 45%),
+    radial-gradient(circle at 85% 80%,rgba(107,31,42,.08),transparent 45%);
+}
+
+/* ================= TRANSITION / ENTRY PAGE ================= */
+#gate{
+  position:fixed;inset:0;z-index:100;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:28px 22px;
+  background:
+    radial-gradient(circle at 50% 35%,#fff6e2 0%,#f6e3bd 45%,#e8cf9c 100%);
+  transition:opacity 1.1s ease, visibility 1.1s;
+}
+#gate.open{opacity:0;visibility:hidden}
+
+/* golden curtain wipe */
+.curtain{
+  position:fixed;top:0;bottom:0;width:52%;z-index:110;
+  background:linear-gradient(160deg,#f7e7c1,#d8b463 45%,#a9832f);
+  transition:transform 1.15s cubic-bezier(.77,0,.18,1);
+  pointer-events:none;
+}
+.curtain.l{left:0;box-shadow:inset -14px 0 26px rgba(0,0,0,.18)}
+.curtain.r{right:0;box-shadow:inset 14px 0 26px rgba(0,0,0,.18)}
+.curtain.away.l{transform:translateX(-101%)}
+.curtain.away.r{transform:translateX(101%)}
+.curtain.gone{display:none}
+
+.gate-frame{
+  position:relative;width:min(74vw,270px);aspect-ratio:1;
+  border-radius:50%;overflow:hidden;
+  border:3px solid var(--gold);
+  box-shadow:0 0 0 9px rgba(255,255,255,.55),0 18px 42px rgba(120,85,20,.35);
+  animation:float 5.5s ease-in-out infinite;
+}
+.gate-frame img{width:100%;height:100%;object-fit:cover}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+
+/* soft glow ring */
+.gate-frame::after{
+  content:"";position:absolute;inset:-3px;border-radius:50%;
+  box-shadow:0 0 34px 6px rgba(201,162,39,.45) inset;
+}
+
+.shloka{font-family:'Marcellus',serif;font-size:.86rem;letter-spacing:3px;
+  color:var(--deep-gold);margin:22px 0 6px;text-transform:uppercase}
+.gate-sub{font-size:1rem;font-style:italic;color:#7b6647;margin-bottom:10px}
+.gate-names{
+  font-family:'Yatra One',cursive;font-size:clamp(1.6rem,7.4vw,2.4rem);
+  color:var(--maroon);line-height:1.35;margin-bottom:6px;
+}
+.gate-names span{display:block;font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;color:var(--gold);margin:2px 0}
+.gate-date{font-family:'Marcellus',serif;letter-spacing:2px;font-size:.9rem;color:#6f5b3e}
+
+.enter-btn{
+  margin-top:26px;padding:13px 34px;border:none;border-radius:40px;cursor:pointer;
+  font-family:'Marcellus',serif;letter-spacing:2.6px;font-size:.82rem;text-transform:uppercase;
+  color:#fff;background:linear-gradient(135deg,var(--maroon),#a63a48);
+  box-shadow:0 10px 24px rgba(107,31,42,.35);
+  animation:pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.055)}}
+
+/* ================= MAIN INVITATION ================= */
+main{position:relative;z-index:2;max-width:640px;margin:0 auto;padding-bottom:40px}
+section{padding:56px 24px;text-align:center}
+
+.reveal{opacity:0;transform:translateY(34px);transition:.95s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+h2{font-family:'Marcellus',serif;font-size:.82rem;letter-spacing:5px;
+  text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.script{font-family:'Yatra One',cursive;color:var(--maroon);
+  font-size:clamp(1.5rem,6.6vw,2.1rem);line-height:1.4}
+p.lede{font-size:1.12rem;line-height:1.85;color:#5d4f42;max-width:430px;margin:0 auto}
+
+/* peacock divider */
+.divider{display:flex;align-items:center;justify-content:center;gap:14px;padding:14px 0}
+.divider .line{height:1px;width:58px;background:linear-gradient(90deg,transparent,var(--gold))}
+.divider .line.r{background:linear-gradient(270deg,transparent,var(--gold))}
+.divider img{width:86px;height:86px;object-fit:contain;
+  animation:spin 34s linear infinite;filter:drop-shadow(0 4px 10px rgba(30,107,107,.25))}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* date block with peacock watermark */
+.date-wrap{position:relative;display:inline-block;padding:26px 40px}
+.date-wrap img.wm{position:absolute;inset:0;margin:auto;width:190px;opacity:.14;pointer-events:none}
+.date-wrap .inner{position:relative;border:1px solid var(--gold);
+  border-radius:6px;padding:22px 34px;background:rgba(255,255,255,.55);backdrop-filter:blur(2px)}
+.mon{font-family:'Marcellus',serif;letter-spacing:6px;font-size:.9rem;color:var(--deep-gold);text-transform:uppercase}
+.day{font-family:'Cormorant Garamond',serif;font-size:4.6rem;line-height:1;color:var(--maroon);font-weight:500}
+.yr{font-family:'Marcellus',serif;letter-spacing:4px;font-size:.85rem;color:#6f5b3e}
+
+/* countdown */
+.count{display:flex;justify-content:center;gap:10px;margin-top:26px;flex-wrap:wrap}
+.count div{min-width:66px;padding:12px 6px;border-radius:10px;
+  background:linear-gradient(160deg,#fff9ec,#f3e2bd);border:1px solid rgba(201,162,39,.45)}
+.count b{display:block;font-size:1.5rem;color:var(--maroon);font-weight:500}
+.count small{font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:#8a7757}
+
+/* lotus panel */
+.lotus-panel{position:relative;border-radius:18px;overflow:hidden;margin:0 4px;
+  box-shadow:0 16px 40px rgba(120,85,20,.20)}
+.lotus-panel img{width:100%;height:auto}
+.lotus-panel .cap{padding:24px 20px 28px;background:linear-gradient(#fffdf8,#f8efdc)}
+
+/* events */
+.event{max-width:420px;margin:0 auto 18px;padding:22px 20px;border-radius:14px;
+  background:#fffdf8;border:1px solid rgba(201,162,39,.35);
+  box-shadow:0 8px 22px rgba(160,120,40,.10);text-align:center}
+.event .nm{font-family:'Yatra One',cursive;color:var(--maroon);font-size:1.28rem}
+.event .sb{font-size:.95rem;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin:4px 0 8px}
+.event .tm{font-family:'Marcellus',serif;font-size:1.25rem;color:var(--teal)}
+.event .ds{font-size:1rem;color:#6d5d4c;margin-top:8px;font-style:italic}
+
+/* venue */
+.venue{border:1px double var(--gold);border-radius:16px;padding:28px 20px;
+  background:rgba(255,255,255,.6);max-width:440px;margin:0 auto}
+.btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px}
+.btn{display:inline-block;padding:12px 22px;border-radius:30px;text-decoration:none;
+  font-family:'Marcellus',serif;font-size:.74rem;letter-spacing:2px;text-transform:uppercase;
+  color:#fff;background:linear-gradient(135deg,var(--teal),#2e8c8c);
+  box-shadow:0 8px 18px rgba(30,107,107,.28)}
+.btn.alt{background:linear-gradient(135deg,var(--maroon),#a63a48);box-shadow:0 8px 18px rgba(107,31,42,.28)}
+.btn.wa{background:linear-gradient(135deg,#128C7E,#25D366);box-shadow:0 8px 18px rgba(18,140,126,.3)}
+
+/* radha krishna closing */
+.rk{width:min(72%,260px);margin:0 auto 6px;opacity:.9;
+  filter:drop-shadow(0 8px 18px rgba(0,0,0,.15))}
+.mantra{font-family:'Marcellus',serif;font-size:.95rem;line-height:2;color:var(--teal);letter-spacing:1px}
+footer{padding:34px 22px 46px;text-align:center;background:linear-gradient(#f8efdc,#efe0c0)}
+footer .fam{font-family:'Yatra One',cursive;color:var(--maroon);font-size:1.25rem;margin:10px 0}
+footer .stamp{font-family:'Marcellus',serif;letter-spacing:3px;font-size:.72rem;color:var(--deep-gold);margin-top:14px}
+
+/* falling petals */
+.petal{position:fixed;top:-24px;z-index:3;pointer-events:none;
+  width:10px;height:14px;border-radius:60% 0 60% 0;background:rgba(224,168,182,.75);
+  animation:fall linear infinite}
+@keyframes fall{
+  0%{transform:translateY(-10vh) rotate(0);opacity:0}
+  12%{opacity:.9}
+  100%{transform:translateY(112vh) rotate(560deg);opacity:0}
+}
+.scroll-hint{margin-top:34px;font-size:.75rem;letter-spacing:3px;color:var(--gold);
+  text-transform:uppercase;animation:bob 2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+</style>
+</head>
+
+<body>
+
+<!-- ============ CURTAIN TRANSITION ============ -->
+<div class="curtain l" id="cl"></div>
+<div class="curtain r" id="cr"></div>
+
+<!-- ============ TRANSITION / ENTRY PAGE ============ -->
+<div id="gate">
+  <div class="gate-frame">
+    <img src="ganesha.jpg" alt="Lord Ganesha">
+  </div>
+
+  <div class="shloka">॥ Om Shri Ganeshaya Namah ॥</div>
+  <div class="gate-sub">With Joy &amp; Blessings</div>
+
+  <div class="gate-names">
+    Padma Priya
+    <span>&amp;</span>
+    Mohan Vamsi
+  </div>
+
+  <div class="gate-date">NISCHITARTHAM · SATURDAY, 15 AUGUST 2026</div>
+
+  <button class="enter-btn" onclick="openInvite()">Tap to Enter</button>
+</div>
+
+<!-- ============ MAIN INVITATION ============ -->
+<main>
+
+  <!-- Invitation -->
+  <section class="reveal">
+    <div class="divider">
+      <span class="line"></span><img src="peacock.png" alt=""><span class="line r"></span>
+    </div>
+    <h2>You Are Invited</h2>
+    <p class="lede">We request the honour of your presence to shower your love and blessings upon
+      <b>Padma Priya</b> and <b>Mohan Vamsi</b> as they begin their beautiful journey together.</p>
+    <div style="margin-top:26px;font-size:1.02rem;color:#7b6647;line-height:1.9">
+      Bheemisetty <b>Padma Priya</b><br>
+      <small>D/o Sri Vasu Deva Naidu &amp; Smt. Leela</small><br>
+      <span style="color:var(--gold);font-size:1.3rem">✦</span><br>
+      Buddha <b>Mohan Vamsi</b><br>
+      <small>S/o Sri Venkata Ramana &amp; Smt. Nagamani</small>
+    </div>
+  </section>
+
+  <!-- Lotus blessing panel -->
+  <section class="reveal" style="padding-top:10px">
+    <div class="lotus-panel">
+      <img src="lotus-hands.jpg" alt="Blessing with lotus">
+      <div class="cap">
+        <div class="script">Two Hearts, One Blessing</div>
+        <p class="lede" style="margin-top:12px;font-size:1.05rem">
+          As the lotus is offered with grace, so are two lives joined —
+          with devotion, trust and the blessings of elders.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Save the date -->
+  <section class="reveal">
+    <div class="divider">
+      <span class="line"></span><img src="peacock.png" alt=""><span class="line r"></span>
+    </div>
+    <h2>Save the Date</h2>
+    <div class="date-wrap">
+      <img class="wm" src="peacock.png" alt="">
+      <div class="inner">
+        <div class="mon">August</div>
+        <div class="day">15</div>
+        <div class="yr">SATURDAY · 2026</div>
+      </div>
+    </div>
+
+    <div class="count">
+      <div><b id="d">–</b><small>Days</small></div>
+      <div><b id="h">–</b><small>Hours</small></div>
+      <div><b id="m">–</b><small>Mins</small></div>
+      <div><b id="s">–</b><small>Secs</small></div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section class="reveal">
+    <h2>Ceremony &amp; Celebration</h2>
+    <div class="event">
+      <div class="nm">Nischitartham</div>
+      <div class="sb">Ring Ceremony</div>
+      <div class="tm">10:30 AM</div>
+      <div class="ds">Vows of the heart, sealed with rings and the blessings of elders.</div>
+    </div>
+    <div class="event">
+      <div class="nm">Lunch</div>
+      <div class="sb">Traditional Feast</div>
+      <div class="tm">12:00 PM</div>
+      <div class="ds">Served with warmth and love, right after the ceremony.</div>
+    </div>
+  </section>
+
+  <!-- Venue -->
+  <section class="reveal">
+    <div class="divider">
+      <span class="line"></span><img src="peacock.png" alt=""><span class="line r"></span>
+    </div>
+    <h2>Join Us</h2>
+    <div class="venue">
+      <div class="script">Palm Beach Resorts</div>
+      <p class="lede" style="margin-top:10px">Beach Road, Visakhapatnam,<br>Andhra Pradesh</p>
+      <div class="btns">
+        <a class="btn" target="_blank"
+           href="https://maps.google.com/?q=Palm+Beach+Resorts+Beach+Road+Visakhapatnam">Get Directions</a>
+        <a class="btn alt" target="_blank"
+           href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nischitartham+-+Padma+Priya+%26+Mohan+Vamsi&dates=20260815T050000Z/20260815T083000Z&details=Nischitartham+ceremony+followed+by+lunch&location=Palm+Beach+Resorts,+Beach+Road,+Visakhapatnam">Add to Calendar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Radha Krishna closing -->
+  <section class="reveal">
+    <img class="rk" src="radha-krishna.png" alt="Radha and Krishna">
+    <div class="mantra">
+      Hare Krishna · Hare Krishna · Krishna Krishna · Hare Hare<br>
+      Hare Rama · Hare Rama · Rama Rama · Hare Hare
+    </div>
+  </section>
+
+  <footer>
+    <div style="font-style:italic;color:#7b6647">With Love &amp; Blessings</div>
+    <div class="fam">The Bheemisetty &amp; Buddha Families</div>
+    <a class="btn wa" href="#" onclick="shareWA(event)">Share on WhatsApp</a>
+    <div class="stamp">✦ SHUBH NISCHITARTHAM · 15 · 08 · 2026 ✦</div>
+  </footer>
+</main>
+
+<script>
+/* ---------- entry transition ---------- */
+function openInvite(){
+  document.getElementById('cl').classList.add('away');
+  document.getElementById('cr').classList.add('away');
+  document.getElementById('gate').classList.add('open');
+  document.body.style.overflow='auto';
+  setTimeout(()=>{
+    document.getElementById('cl').classList.add('gone');
+    document.getElementById('cr').classList.add('gone');
+    window.scrollTo({top:0});
+    document.querySelector('main section').classList.add('in');
+  },1250);
+}
+document.body.style.overflow='hidden';
+
+/* curtains start closed on the gate, then part to reveal the gate itself */
+window.addEventListener('load',()=>{
+  setTimeout(()=>{
+    document.getElementById('cl').classList.add('away');
+    document.getElementById('cr').classList.add('away');
+    setTimeout(()=>{ /* reset for the second wipe */
+      document.getElementById('cl').classList.remove('away');
+      document.getElementById('cr').classList.remove('away');
+      document.getElementById('cl').style.transition='none';
+      document.getElementById('cr').style.transition='none';
+      requestAnimationFrame(()=>{
+        document.getElementById('cl').classList.add('away');
+        document.getElementById('cr').classList.add('away');
+        setTimeout(()=>{
+          document.getElementById('cl').style.transition='';
+          document.getElementById('cr').style.transition='';
+        },60);
+      });
+    },1300);
+  },250);
+});
+
+/* ---------- scroll reveal ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ---------- countdown ---------- */
+const target=new Date('2026-08-15T10:30:00+05:30').getTime();
+setInterval(()=>{
+  let t=target-Date.now(); if(t<0)t=0;
+  document.getElementById('d').textContent=Math.floor(t/864e5);
+  document.getElementById('h').textContent=Math.floor(t%864e5/36e5);
+  document.getElementById('m').textContent=Math.floor(t%36e5/6e4);
+  document.getElementById('s').textContent=Math.floor(t%6e4/1e3);
+},1000);
+
+/* ---------- petals ---------- */
+for(let i=0;i<14;i++){
+  const p=document.createElement('div');p.className='petal';
+  p.style.left=Math.random()*100+'vw';
+  p.style.animationDuration=(9+Math.random()*9)+'s';
+  p.style.animationDelay=(Math.random()*10)+'s';
+  p.style.background=['rgba(224,168,182,.75)','rgba(201,162,39,.6)','rgba(255,255,255,.7)'][i%3];
+  document.body.appendChild(p);
+}
+
+/* ---------- WhatsApp share ---------- */
+function shareWA(e){
+  e.preventDefault();
+  const txt="🕉️ You're invited to the Nischitartham of Padma Priya \u0026 Mohan Vamsi\n📅 Saturday, 15 August 2026 · 10:30 AM\n📍 Palm Beach Resorts, Beach Road, Visakhapatnam\n\nWith love, the Bheemisetty \u0026 Buddha Families 💛\n"+location.href;
+  window.open('https://wa.me/?text='+encodeURIComponent(txt),'_blank');
+}
+</script>
+</body>
+</html>
